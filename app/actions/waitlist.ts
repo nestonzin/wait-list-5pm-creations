@@ -8,8 +8,9 @@ const supabase = createClient(
 );
 
 export async function addToWaitlist(formData: FormData) {
-  const email = formData.get("email");
-  const phone = formData.get("phone");
+  const email = formData.get("email") || null;
+  const phone = formData.get("phone") || null;
+  const project_name = formData.get("project_name");
 
   console.log("📧 Received form data:", { email, phone });
 
@@ -20,6 +21,7 @@ export async function addToWaitlist(formData: FormData) {
         {
           email,
           phone,
+          project_name,
         },
       ])
       .select();
