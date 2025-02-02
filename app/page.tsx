@@ -144,6 +144,7 @@ export default function Home() {
       return;
     }
 
+
     const result = await addToWaitlist(formData);
     if (result.success) {
       toast({
@@ -161,7 +162,7 @@ export default function Home() {
 
   return (
     <>
-      {!isMobile && (
+      {/* {!isMobile && (
         <div className="video-wrapper">
           <iframe
             className="fixed inset-0 w-full h-full object-cover -z-10"
@@ -191,7 +192,7 @@ export default function Home() {
             }
           `}</style>
         </div>
-      )}
+      )} */}
 
       <div
         className={`min-h-screen flex flex-col justify-center items-center p-8 font-mono text-black ${
